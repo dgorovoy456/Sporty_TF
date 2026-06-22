@@ -1,0 +1,10 @@
+name: system-tests
+on:
+  push:
+jobs:
+  validate-system-tests:
+    uses: ./.github/workflows/setup-base.yml
+    secrets: inherit
+    with:
+      run-tox: false
+      run-system-tests: true

@@ -11,6 +11,7 @@ load_dotenv()
 def user_id():
     return os.getenv("X_USER_ID")
 
+
 @pytest.fixture()
 def api_helper(user_id):
-    yield APIHelper(x_user_id=user_id)
+    return APIHelper(x_user_id=user_id)
