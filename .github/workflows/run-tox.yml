@@ -4,5 +4,9 @@ on:
 jobs:
   tox:
     uses: ./.github/workflows/setup-base.yml
+    permissions:
+      checks: write
+      pull-requests: write
+      contents: read
     with:
       run-tox: true
