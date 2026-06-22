@@ -1,0 +1,8 @@
+name: validate-tox
+on:
+  push:
+jobs:
+  tox:
+    uses: ./.github/workflows/setup-base.yml
+    with:
+      run-tox: true
