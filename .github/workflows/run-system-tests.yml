@@ -4,6 +4,10 @@ on:
 jobs:
   validate-system-tests:
     uses: ./.github/workflows/setup-base.yml
+    permissions:
+      checks: write
+      pull-requests: write
+      contents: read
     secrets: inherit
     with:
       run-tox: false
